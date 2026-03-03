@@ -1,0 +1,13 @@
+## Power Queries
+
+1. Removed -1/0 from sales_amount
+
+= Table.SelectRows(transactions_Table, each [sales_amount] <> -1 and [sales_amount] <> 0)
+
+2. Cleanup Currency
+
+= Table.SelectRows(#"removed-1/0 from sales_amount", each ([currency] = "INR#(cr)" or [currency] = "USD#(cr)"))
+
+3. Added norm_sales_amount
+
+= Table.AddColumn(#"cleanup currency", "norm_sales_amount", each if [currency]="USD#(cr)" then [sales_amount]*91 else [sales_amount])
