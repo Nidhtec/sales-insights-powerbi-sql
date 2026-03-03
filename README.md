@@ -64,18 +64,6 @@ The dashboard provides insights such as:
 - Product-wise sales performance
 - Year-wise and product-wise filtering using slicers
 
-Screenshot of the dashboard:
-
-![Dashboard](screenshots/dashboard.png)
-
----
-
-## 📂 Repository Structure
-
-- `sql/` – SQL queries used for analysis
-- `powerbi/` – Power BI report file
-- `screenshots/` – dashboard images
-
 ---
 
 ## 🎯 Key Business Insights
